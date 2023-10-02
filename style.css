@@ -13,13 +13,23 @@ body {
     background: #132aaa;
 }
 
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
 .wrapper .carousel {
-    white-space: nowrap;
-    display: flex;
+    /* white-space: nowrap; */
+    display: inline-block;
     font-size: 0;
     cursor: pointer;
     overflow: hidden;
     scroll-behavior: smooth;
+    animation: 8s slide infinite linear;
+}
+
+.wrapper:hover .carousel {
+    animation-play-state: paused;
 }
 
 .carousel img {
@@ -36,6 +46,7 @@ body {
 }
 
 .wrapper {
+    white-space: nowrap;
     max-width: 1300px;
     position: relative;
 }

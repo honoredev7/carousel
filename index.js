@@ -42,6 +42,9 @@ const carousel = document.querySelector('.carousel')
 const firstImage = carousel.querySelectorAll('img')[0]
 const arrowIcons = document.querySelectorAll('.wrapper i')
 
+const copy = document.querySelector('.carousel').cloneNode(true)
+document.querySelector('.wrapper').appendChild(copy)
+
 let firstImageWidth = firstImage.clientWidth + 18
 
 arrowIcons.forEach(icon => {
